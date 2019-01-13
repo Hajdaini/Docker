@@ -1,0 +1,8 @@
+ajdaini_ansible_container:
+  image: ansible_image
+  extra_hosts:
+  - "server1:192.168.1.2"
+  - "server2:192.168.1.3"
+  volumes:
+  - ./ansible:/root/ansible
+  container_name: ajdaini_ansible_container

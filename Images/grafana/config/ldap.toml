@@ -1,0 +1,35 @@
+[[servers]]
+host = "192.168.1.10"
+port = 389
+use_ssl = false
+start_tls = false
+ssl_skip_verify = true
+bind_dn = "CN=ldap-user,OU=Comptes speciaux,OU=Utilisateurs,OU=Luxury,DC=LUXURY,DC=LOCAL"
+bind_password = '[YOUR_PASSWORD]'
+search_filter = "(sAMAccountName=%s)"
+search_base_dns = ["DC=LUXURY,DC=LOCAL"]
+
+[servers.attributes]
+name = "givenName"
+surname = "sn"
+username = "sAMAccountName"
+member_of = "memberOf"
+email =  "mail"
+
+# [[servers.group_mappings]]
+# group_dn = "cn=admins,dc=grafana,dc=org"
+# org_role = "Admin"
+# To make user an instance admin  (Grafana Admin) uncomment line below
+# grafana_admin = true
+# The Grafana organization database id, optional, if left out the default org (id 1) will be used
+# org_id = 1
+
+# Users that can view and edit dashboards
+[[servers.group_mappings]]
+group_dn = "CN=GP_Supervision_editor,OU=Application,OU=Groupes,OU=Luxury,DC=LUXURY,DC=LOCAL"
+org_role = "Editor"
+
+# Users that can only view dashboards
+[[servers.group_mappings]]
+group_dn = "CN=GP_Supervision_viewer,OU=Application,OU=Groupes,OU=Luxury,DC=LUXURY,DC=LOCAL"
+org_role = "Viewer

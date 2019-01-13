@@ -1,0 +1,5 @@
+# it is important for the dockerfile success to let the ansible_host
+
+[test]
+server1 ansible_host=192.168.1.2
+server2 ansible_host=192.168.1.3

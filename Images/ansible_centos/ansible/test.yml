@@ -1,0 +1,11 @@
+---
+- hosts: test
+  tasks:
+    - name: test ls
+      shell: ls /
+      register: content
+      changed_when: false
+    
+    - name: debug
+      debug:
+        var: result
