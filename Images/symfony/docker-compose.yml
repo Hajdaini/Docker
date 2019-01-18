@@ -20,7 +20,7 @@ services:
             - '3569:80'
         restart: always
         volumes:
-            - '[YOUR APP FULL PATH]:/var/www/gitlab-sf/'
+            - '[YOUR APP FULL PATH]:/var/www/app/'
 
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
