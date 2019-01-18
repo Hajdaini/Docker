@@ -3,7 +3,7 @@ FROM php:7.3.0-apache-stretch
 LABEL maintainer="AJDAINI Hatim <hatim.ajdaini.ext@orange.com>" \
       description="symfony application"
 
-ENV PROJECT_PATH="/var/www/gitlab-sf/"
+ENV PROJECT_PATH="/var/www/app/"
 
 RUN apt-get update && \
     apt-get install -y \
