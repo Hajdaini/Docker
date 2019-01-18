@@ -6,7 +6,7 @@ Symfony docker image with phpmyadmin and mysql
 
 ## How to ?
 
-**Please first change in the file docker-compose.yml the word [YOUR APP FULL PATH] by the full symfony project path from your local machine**
+**`Please first change in the file docker-compose.yml the word [YOUR APP FULL PATH] by the full symfony project path from your local machine`**
 
 - Run the image and container :
 
