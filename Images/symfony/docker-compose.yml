@@ -6,16 +6,16 @@ services:
             MYSQL_USER: user
             MYSQL_PASSWORD: password
             MYSQL_ROOT_PASSWORD: testos
-        container_name: logger_db
+        container_name: sf_app_db
         volumes:
             - 'db_data:/var/lib/mysql'
         restart: always
         ports:
             - '3306:3306'
 
-    logger:
-        image: logger
-        container_name: logger_c
+    sf_app:
+        image: sf_app
+        container_name: sf_app_c
         ports:
             - '3569:80'
         restart: always
@@ -28,7 +28,7 @@ services:
             MYSQL_USER: user
             MYSQL_PASSWORD: password
             MYSQL_ROOT_PASSWORD: testos
-        container_name: logger_phpmyadmin
+        container_name: sf_app_phpmyadmin
         ports:
             - '9658:80'
         restart: always
