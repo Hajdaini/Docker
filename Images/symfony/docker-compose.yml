@@ -1,0 +1,38 @@
+version: '3.3'
+services:
+    db:
+        image: 'mysql:5.7'
+        environment:
+            MYSQL_USER: user
+            MYSQL_PASSWORD: password
+            MYSQL_ROOT_PASSWORD: testos
+        container_name: logger_db
+        volumes:
+            - 'db_data:/var/lib/mysql'
+        restart: always
+        ports:
+            - '3306:3306'
+
+    logger:
+        image: logger
+        container_name: logger_c
+        ports:
+            - '3569:80'
+        restart: always
+        volumes:
+            - '[YOUR APP FULL PATH]:/var/www/gitlab-sf/'
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        environment:
+            MYSQL_USER: user
+            MYSQL_PASSWORD: password
+            MYSQL_ROOT_PASSWORD: testos
+        container_name: logger_phpmyadmin
+        ports:
+            - '9658:80'
+        restart: always
+        links:
+            - 'db:db'
+volumes:
+    db_data:
