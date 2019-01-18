@@ -14,6 +14,7 @@ Symfony docker image with phpmyadmin and mysql
 chmod 770 run_app.sh
 ./run_app.sh
 ```
+Then visit the http://[YOUR CONTAINER_IP]:3569
 
 - Go in the tty of the container :
 
