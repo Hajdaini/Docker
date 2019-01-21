@@ -22,6 +22,8 @@ RUN echo "set tabsize 4" >> ~/.nanorc
 
 RUN a2enmod proxy_fcgi ssl rewrite proxy proxy_balancer proxy_http
 
+RUN echo "memory_limit = 512M" >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini
+
 ADD ./apache_config/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 ADD ./apache_config/htaccess /.htaccess
