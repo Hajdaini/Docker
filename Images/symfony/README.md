@@ -6,7 +6,12 @@ Symfony docker image with phpmyadmin and mysql
 
 ## How to ?
 
-**`In the docker-compose.yml change the word [YOUR APP FULL PATH] by your full symfony project path from your local machine`**
+
+You can use the diff language tag to generate green and red highlighted text:
+
+```diff
+- In the docker-compose.yml change the word [YOUR APP FULL PATH] by your full symfony project path from your local machine
+```
 
 - Run the image and container :
 
