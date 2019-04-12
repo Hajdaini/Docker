@@ -3,7 +3,7 @@ Information of namespaces
 
 # Usage
 ```
-./rm_ps_all.sh [CONTAINER ID|NAME]
+./namespace.sh [CONTAINER ID|NAME]
 ```
 
 # Output
