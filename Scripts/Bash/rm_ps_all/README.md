@@ -1,5 +1,5 @@
 # Description
-Remove all container ps
+Remove all containers !
 
 # Usage
 ```
