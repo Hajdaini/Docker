@@ -1,13 +1,16 @@
 # Description
+
 Show the global config of docker and ip and mac address of all containers **UP** status
 
 # Usage
-```
+
+```shell
 python3 info_ip.y
 ```
 
 ## Ouput Example :
-```
+
+```textile
 GLOBAL DOCKER CONFIG :
         Docker network bridge name : docker0
         Subnet : 172.18.0.0/16

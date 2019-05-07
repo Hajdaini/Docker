@@ -12,34 +12,35 @@ You can use the diff language tag to generate green and red highlighted text:
 
 - Run the image and container :
 
-```shell
-chmod 770 run_app.sh
-./run_app.sh
-```
+  ```shell
+  chmod 770 run_app.sh
+  ./run_app.sh
+  ```
+
 Then visit the http://[YOUR CONTAINER_IP]:3569
 
 - Go in the tty of the container :
 
-```shell
-docker exec -ti sf_app_c /bin/bash
-```
+  ```shell
+  docker exec -ti sf_app_c /bin/bash
+  ```
 
 - Restart server :
 
-```shell
-docker rm -f sf_app_c && docker-compose up -d
-```
+  ```shell
+  docker rm -f sf_app_c && docker-compose up -d
+  ```
 
 ### Debug
  
 - debug only the last 100 lines of the log file :
 
-```shell
-docker logs --tail=100 --timestamps sf_app_c
-```
+  ```shell
+  docker logs --tail=100 --timestamps sf_app_c
+  ```
 
 - debug the log file permanently :
 
-```shell
-docker logs -f --tail --timestamps sf_app_c
-```
+  ```shell
+  docker logs -f --tail --timestamps sf_app_c
+  ```

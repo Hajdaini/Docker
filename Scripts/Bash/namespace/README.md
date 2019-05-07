@@ -7,8 +7,8 @@ Information of namespaces
 ```
 
 # Output
-```
-[root@docker ~]# ./namespace.sh 2c
+
+```textile
 total 0
 dr-x--x--x 2 root root 0 Oct 20 20:17 .
 dr-xr-xr-x 9 root root 0 Oct 20 20:17 ..
