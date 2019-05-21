@@ -9,11 +9,11 @@ RUN yum install -y ansible nano openssh-clients sshpass
 COPY hosts /etc/ansible/hosts
 
 # genereate ssh key
-RUN ssh-keygen -q -t rsa -N '' -f /id_rsa
+RUN ssh-keygen -q -t rsa -N '' -f /root/.ssh/id_rsa
 
 # add your public key to remote machines
-RUN sshpass -p <YOUR_ROOT_REMOTE_MACHINE_PASSWORD> ssh-copy-id -f -o StrictHostKeyChecking=no root@192.168.1.2
-RUN sshpass -p <YOUR_ROOT_REMOTE_MACHINE_PASSWORD> ssh-copy-id -f -o StrictHostKeyChecking=no root@192.168.1.3
+RUN sshpass -p <YOUR_ROOT_REMOTE_MACHINE_PASSWORD> ssh-copy-id -f -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no root@192.168.1.2
+RUN sshpass -p <YOUR_ROOT_REMOTE_MACHINE_PASSWORD> ssh-copy-id -f -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no root@192.168.1.3
 
 # tests your command ansible in remote hosts and also ensures that all your ssh connections work
 RUN yes 'y' | ansible all -m ping
