@@ -5,7 +5,7 @@ LABEL maintainer="AJDAINI Hatim <hatim.ajdaini.ext@orange.com>" \
 
 ENV PROJECT_PATH="/var/www/app/"
 
-RUN apt-get update && \
+RUN apt-get update -y && \
     apt-get install -y \
     curl \
     wget \
